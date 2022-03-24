@@ -2,9 +2,11 @@ A simple R [shiny](https://shiny.rstudio.com/) app for illustrating k-nearest ne
 
 The data consists of three variables: two continuous features and a single binary target variable. The colours of the points in the plot show which class it belongs to (orange or blue). The colours of the grid points show what class that point is predicted to be from by the k-NN algorithm. In other words, the grid illustrates the classification regions. Black contour lines indicate the decision boundary.
 
+The data comes from the now-archived CRAN package {ElemStatLearn}, and is included in the file `mixture.example.RData`. The {ElemStatLearn} package is therefore no longer required to run this app.
+
 You will need the following packages to be installed:
 ```
-install.packages(c("shiny", "plotrix", "ElemStatLearn"))
+install.packages(c("shiny", "plotrix"))
 ```
 
 The app can then be run from within the R console with the following code:
@@ -13,8 +15,6 @@ library("shiny")
 runGitHub("schoonees/kNN")  
 ```
 
-
 ### Using the App
 
-Move the slider to control the value of k. If you tick the box beneath the slider, you can select a single point for which the 
-neighbourhood is then highlighted. You can see how the neighbourhood changes by moving the slider after you have selected the point.
+Move the slider to control the value of k. If you tick the box beneath the slider, you can select a single point for which the neighbourhood is then highlighted. You can see how the neighbourhood changes by moving the slider after you have selected the point.
